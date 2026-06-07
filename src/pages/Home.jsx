@@ -245,6 +245,17 @@ export default function Home() {
                 <p className="font-body-md text-on-surface-variant">Ready to compile some ideas? Send a request payload.</p>
               </div>
               <form className="flex flex-col gap-6">
+                
+                <div className="flex flex-col gap-2 relative">
+  <label className="font-code-display text-xs text-primary flex items-center gap-2">
+    <span className="material-symbols-outlined text-[14px]">terminal</span> const name =
+  </label>
+  <div className="relative flex items-center">
+    <span className="absolute left-3 text-primary font-code-display animate-pulse">&gt;</span>
+    <input className="w-full bg-[#0A0A0A]/80 border border-outline-variant/30 focus:border-primary text-primary font-code-display pl-8 pr-4 py-3 focus:ring-0 focus:outline-none transition-all shadow-inner caret-primary rounded-sm placeholder:text-outline-variant/50" placeholder="your name" type="text" />
+  </div>
+</div>
+
                 <div className="flex flex-col gap-2 relative">
                   <label className="font-code-display text-xs text-primary flex items-center gap-2">
                     <span className="material-symbols-outlined text-[14px]">terminal</span> const email =

@@ -36,7 +36,7 @@ export default function Navbar() {
 
       <div className="hidden md:block">
         <a
-          href="#"
+          href="/Sunbal_Aziz_CV.pdf" download="Sunbal_Aziz_Resume.pdf"
           className="px-6 py-2 border border-primary text-primary font-code-display text-code-display hover:bg-primary/10 transition-colors duration-300 cursor-pointer"
         >
           Resume
