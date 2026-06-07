@@ -18,8 +18,8 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed w-full top-0 left-0 bg-background/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-[0_0_30px_rgba(110,229,145,0.1)] flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50">
-        <Link to="/" className="font-headline-md text-headline-md text-on-surface tracking-tighter flex items-center">
+      <header style={{ width: '100vw', maxWidth: '100vw', boxSizing: 'border-box' }} className="fixed top-0 left-0 bg-background/80 backdrop-blur-xl border-b border-outline-variant/20 shadow-[0_0_30px_rgba(110,229,145,0.1)] flex justify-between items-center px-4 md:px-margin-desktop py-4 z-50 overflow-hidden">
+        <Link to="/" className="font-headline-md text-headline-md text-on-surface tracking-tighter flex items-center shrink-0">
           Sunbal <span className="code-bracket ml-2">{'{Aziz}'}</span>
         </Link>
 
@@ -39,7 +39,7 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden md:block shrink-0">
           <a
             href="/Sunbal_Aziz_CV.pdf" download="Sunbal_Aziz_Resume.pdf"
             className="px-6 py-2 border border-primary text-primary font-code-display text-code-display hover:bg-primary/10 transition-colors duration-300 cursor-pointer"
@@ -49,7 +49,7 @@ export default function Navbar() {
         </div>
 
         <button
-          className="md:hidden text-on-surface mr-2 p-1"
+          className="md:hidden text-on-surface p-1 shrink-0"
           onClick={() => setMenuOpen(prev => !prev)}
           aria-label="Toggle menu"
         >
@@ -61,7 +61,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="fixed top-[64px] left-0 w-full bg-background/95 backdrop-blur-xl border-b border-outline-variant/20 shadow-lg z-40 flex flex-col items-start px-margin-mobile py-4 gap-4 md:hidden">
+        <div style={{ width: '100vw', maxWidth: '100vw', boxSizing: 'border-box' }} className="fixed top-[64px] left-0 bg-background/95 backdrop-blur-xl border-b border-outline-variant/20 shadow-lg z-40 flex flex-col items-start px-4 py-4 gap-4 md:hidden">
           {navLinks.map(({ label, path }) => (
             <Link
               key={path}
