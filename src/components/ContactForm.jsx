@@ -1,7 +1,5 @@
 import { useState } from 'react'
 
-const RESEND_API_KEY = import.meta.env.VITE_RESEND_API_KEY
-
 const userEmailHTML = (name) => `
 <!DOCTYPE html>
 <html>
@@ -85,52 +83,20 @@ export default function ContactForm({ variant = 'default' }) {
     setStatus('sending')
 
     try {
-      // Email to portfolio owner
-      const ownerRes = await fetch('/api/send-email', {
+      const res = await fetch('/api/send-email', {
         method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${RESEND_API_KEY}`,
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          from: 'Sunbal Aziz Portfolio <connect@sunbal.xcler.dev>',
-          to: ['connect@sunbal.xcler.dev'],
-          subject: `New message from ${form.name} via Portfolio`,
-          html: `
-            <h2>New Contact Form Submission</h2>
-            <p><strong>Name:</strong> ${form.name}</p>
-            <p><strong>Email:</strong> ${form.email}</p>
-            <p><strong>Message:</strong></p>
-            <p>${form.message}</p>
-          `,
+          name: form.name,
+          email: form.email,
+          message: form.message,
         }),
       })
 
-      if (!ownerRes.ok) {
-        const errData = await ownerRes.json().catch(() => ({}))
-        console.error('Resend owner email error:', ownerRes.status, errData)
-        throw new Error(`Owner email failed: ${ownerRes.status}`)
-      }
-
-      // Confirmation email to the person who filled the form
-      const userRes = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${RESEND_API_KEY}`,
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          from: 'Sunbal Aziz <connect@sunbal.xcler.dev>',
-          to: [form.email],
-          subject: `Got your message, ${form.name}! 🚀`,
-          html: userEmailHTML(form.name),
-        }),
-      })
-
-      if (!userRes.ok) {
-        const errData = await userRes.json().catch(() => ({}))
-        console.error('Resend user email error:', userRes.status, errData)
-        throw new Error(`User email failed: ${userRes.status}`)
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}))
+        console.error('Send email error:', res.status, errData)
+        throw new Error(`Failed: ${res.status}`)
       }
 
       setStatus('success')
@@ -141,7 +107,6 @@ export default function ContactForm({ variant = 'default' }) {
     }
   }
 
-  // Styles vary slightly between homepage and contact page
   const isTerminal = variant === 'terminal'
 
   const inputClass = isTerminal
