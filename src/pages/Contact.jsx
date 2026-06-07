@@ -1,5 +1,6 @@
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import ContactForm from '../components/ContactForm'
 
 export default function Contact() {
   return (
@@ -70,27 +71,10 @@ export default function Contact() {
         {/* Right: Form */}
         <div className="flex-1 glass-panel p-8 md:p-12 relative overflow-hidden" style={{borderRadius:'100px 100px 0.5rem 0.5rem'}}>
           <div className="absolute inset-0 opacity-10 pointer-events-none" style={{backgroundImage:'radial-gradient(#50c878 1px, transparent 1px)',backgroundSize:'20px 20px'}}></div>
-          <form className="relative z-10 flex flex-col gap-6">
-            <div className="flex flex-col gap-2">
-              <label className="font-label-caps text-label-caps text-primary uppercase tracking-wider" htmlFor="identity">Identity_String</label>
-              <input className="w-full bg-[#0A0A0A] border-0 border-b border-outline-variant text-on-surface font-body-md text-body-md py-3 px-4 rounded-t-DEFAULT input-glow transition-all duration-300 placeholder:text-surface-variant" id="identity" placeholder="Enter your name" type="text" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="font-label-caps text-label-caps text-primary uppercase tracking-wider" htmlFor="comm_vector">Comm_Vector</label>
-              <input className="w-full bg-[#0A0A0A] border-0 border-b border-outline-variant text-on-surface font-body-md text-body-md py-3 px-4 rounded-t-DEFAULT input-glow transition-all duration-300 placeholder:text-surface-variant" id="comm_vector" placeholder="Enter your email" type="email" />
-            </div>
-            <div className="flex flex-col gap-2">
-              <label className="font-label-caps text-label-caps text-primary uppercase tracking-wider" htmlFor="payload">Data_Payload</label>
-              <textarea className="w-full bg-[#0A0A0A] border-0 border-b border-outline-variant text-on-surface font-body-md text-body-md py-3 px-4 rounded-t-DEFAULT input-glow transition-all duration-300 resize-none placeholder:text-surface-variant" id="payload" placeholder="Describe the parameters..." rows="5"></textarea>
-            </div>
-            <div className="pt-4 flex justify-end">
-              <button className="group relative px-8 py-3 bg-primary text-on-primary font-label-caps text-label-caps uppercase rounded-DEFAULT transition-all duration-300 flex items-center gap-2 overflow-hidden hover:shadow-[0_0_40px_rgba(80,200,120,0.5)]" type="button">
-                <span className="relative z-10">Transmit_Data</span>
-                <span className="material-symbols-outlined relative z-10 text-[18px] group-hover:translate-x-1 transition-transform duration-300">send</span>
-                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
-              </button>
-            </div>
-          </form>
+          
+          <ContactForm variant="terminal" />
+
+
         </div>
       </main>
       <Footer />

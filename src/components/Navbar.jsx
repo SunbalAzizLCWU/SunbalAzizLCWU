@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'Services', path: '/services' },
   { label: 'Projects', path: '/projects' },
   { label: 'Certifications', path: '/certifications' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'Connect', path: '/contact' },
 ]
 
 export default function Navbar() {

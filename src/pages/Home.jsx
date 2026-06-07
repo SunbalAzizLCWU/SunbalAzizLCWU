@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import ContactForm from '../components/ContactForm'
 
 const techStack = ['React','Next.js','Python','Flask','Supabase','Vercel','HTML5','CSS3','JavaScript','TypeScript','Tailwind','Redux','MongoDB','Express','Node.js','TensorFlow','PyTorch','Scikit-learn','LangChain','OpenAI','Claude API','Hugging Face','Git','Docker','AWS']
 
@@ -244,40 +245,10 @@ export default function Home() {
                 </h2>
                 <p className="font-body-md text-on-surface-variant">Ready to compile some ideas? Send a request payload.</p>
               </div>
-              <form className="flex flex-col gap-6">
-                
-                <div className="flex flex-col gap-2 relative">
-  <label className="font-code-display text-xs text-primary flex items-center gap-2">
-    <span className="material-symbols-outlined text-[14px]">terminal</span> const name =
-  </label>
-  <div className="relative flex items-center">
-    <span className="absolute left-3 text-primary font-code-display animate-pulse">&gt;</span>
-    <input className="w-full bg-[#0A0A0A]/80 border border-outline-variant/30 focus:border-primary text-primary font-code-display pl-8 pr-4 py-3 focus:ring-0 focus:outline-none transition-all shadow-inner caret-primary rounded-sm placeholder:text-outline-variant/50" placeholder="your name" type="text" />
-  </div>
-</div>
+              
+                <ContactForm variant="default" />
 
-                <div className="flex flex-col gap-2 relative">
-                  <label className="font-code-display text-xs text-primary flex items-center gap-2">
-                    <span className="material-symbols-outlined text-[14px]">terminal</span> const email =
-                  </label>
-                  <div className="relative flex items-center">
-                    <span className="absolute left-3 text-primary font-code-display animate-pulse">&gt;</span>
-                    <input className="w-full bg-[#0A0A0A]/80 border border-outline-variant/30 focus:border-primary text-primary font-code-display pl-8 pr-4 py-3 focus:ring-0 focus:outline-none transition-all shadow-inner caret-primary rounded-sm placeholder:text-outline-variant/50" placeholder="you@domain.com" type="email" />
-                  </div>
-                </div>
-                <div className="flex flex-col gap-2 relative mt-2">
-                  <label className="font-code-display text-xs text-primary flex items-center gap-2">
-                    <span className="material-symbols-outlined text-[14px]">terminal</span> const message =
-                  </label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-3 text-primary font-code-display animate-pulse">&gt;</span>
-                    <textarea className="w-full bg-[#0A0A0A]/80 border border-outline-variant/30 focus:border-primary text-primary font-code-display pl-8 pr-4 py-3 focus:ring-0 focus:outline-none transition-all shadow-inner caret-primary rounded-sm placeholder:text-outline-variant/50 resize-none" placeholder="Your transmission here..." rows="4"></textarea>
-                  </div>
-                </div>
-                <button className="mt-4 font-code-display text-primary border border-primary px-8 py-4 w-full sm:w-fit hover:bg-primary/10 transition-all emerald-glow cursor-pointer flex items-center justify-center gap-2 group" type="button">
-                  [ EXECUTE_SUBMIT ] <span className="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">send</span>
-                </button>
-              </form>
+
             </div>
           </div>
         </section>
