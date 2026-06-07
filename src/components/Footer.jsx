@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function Footer() {
   return (
     <footer className="bg-surface-container-lowest w-full py-12 px-margin-mobile md:px-margin-desktop border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-gutter">
@@ -11,10 +13,9 @@ export default function Footer() {
         <a href="https://github.com/SunbalAzizLCWU" className="hover:text-primary transition-colors">GitHub</a>
         <a href="https://www.linkedin.com/in/sunbal-aziz-lcwu" className="hover:text-primary transition-colors">LinkedIn</a>
         <Link to="/contact" className="hover:text-primary transition-colors">
-  Connect
-</Link>
-
-   </div>
+          Connect
+        </Link>
+      </div>
     </footer>
   )
 }

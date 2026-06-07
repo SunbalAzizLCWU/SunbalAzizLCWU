@@ -34,9 +34,9 @@ export default function Contact() {
               <p><span className="text-primary">&gt;</span> AWAITING_PAYLOAD...</p>
               <p className="text-surface-variant">----------------------------------------</p>
               <div className="mt-4 space-y-4">
-                <a className="flex items-center gap-3 text-on-surface hover:text-primary transition-colors group/link w-fit" href="mailto:connect@sunbalaziz.com">
+                <a className="flex items-center gap-3 text-on-surface hover:text-primary transition-colors group/link w-fit" href="mailto:yo@sunbal.xcler.dev">
                   <span className="material-symbols-outlined text-primary">mail</span>
-                  <span>connect@sunbalaziz.com</span>
+                  <span>yo@sunbal.xcler.dev</span>
                 </a>
                 <div className="flex gap-4 pt-4">
                   {/* LinkedIn */}
@@ -49,7 +49,6 @@ export default function Contact() {
                  </a>
 
                  {/* Website */}
-
 <a
   aria-label="Website"
   className="w-10 h-10 flex items-center justify-center rounded-lg border border-primary/20 hover:border-primary/60 hover:bg-primary/10 text-primary transition-all duration-300"
@@ -57,8 +56,10 @@ export default function Contact() {
   target="_blank"
   rel="noopener noreferrer"
 >
-  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 2c1.657 0 3 3.582 3 8s-1.343 8-3 8-3-3.582-3-8 1.343-8 3-8zm-7.938 6h3.062c.138-2.38.777-4.48 1.75-6.02C6.1 5.1 4.53 7.3 4.062 10zm0 4c.468 2.7 2.038 4.9 4.812 6.02-.973-1.54-1.612-3.64-1.75-6.02H4.062zM12 20c-1.657 0-3-3.582-3-8s1.343-8 3-8 3 3.582 3 8-1.343 8-3 8zm3.188-.02c2.774-1.12 4.344-3.32 4.812-6.02h-3.062c-.138 2.38-.777 4.48-1.75 6.02zM16.938 10H20c-.468-2.7-2.038-4.9-4.812-6.02.973 1.54 1.612 3.64 1.75 6.02z"/>
+  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9" />
+    <path d="M3 12h18" />
+    <path d="M12 3c3 3 3 15 0 18c-3-3-3-15 0-18z" />
   </svg>
 </a>
 
