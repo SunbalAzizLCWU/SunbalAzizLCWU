@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const BREVO_API_KEY = import.meta.env.VITE_BREVO_API_KEY
+const RESEND_API_KEY = import.meta.env.VITE_RESEND_API_KEY
 
 const userEmailHTML = (name) => `
 <!DOCTYPE html>
@@ -86,18 +86,17 @@ export default function ContactForm({ variant = 'default' }) {
 
     try {
       // Email to portfolio owner
-      const ownerRes = await fetch('https://api.brevo.com/v3/smtp/email', {
+      const ownerRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
+          'Authorization': `Bearer ${RESEND_API_KEY}`,
           'Content-Type': 'application/json',
-          'api-key': BREVO_API_KEY,
         },
         body: JSON.stringify({
-          sender: { name: 'Sunbal Aziz Portfolio', email: 'connect@sunbalaziz.com' },
-          to: [{ email: 'connect@sunbalaziz.com', name: 'Sunbal Aziz' }],
+          from: 'Sunbal Aziz Portfolio <connect@sunbal.xcler.dev>',
+          to: ['connect@sunbal.xcler.dev'],
           subject: `New message from ${form.name} via Portfolio`,
-          htmlContent: `
+          html: `
             <h2>New Contact Form Submission</h2>
             <p><strong>Name:</strong> ${form.name}</p>
             <p><strong>Email:</strong> ${form.email}</p>
@@ -109,29 +108,28 @@ export default function ContactForm({ variant = 'default' }) {
 
       if (!ownerRes.ok) {
         const errData = await ownerRes.json().catch(() => ({}))
-        console.error('Brevo owner email error:', ownerRes.status, errData)
+        console.error('Resend owner email error:', ownerRes.status, errData)
         throw new Error(`Owner email failed: ${ownerRes.status}`)
       }
 
       // Confirmation email to the person who filled the form
-      const userRes = await fetch('https://api.brevo.com/v3/smtp/email', {
+      const userRes = await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
-          'Accept': 'application/json',
+          'Authorization': `Bearer ${RESEND_API_KEY}`,
           'Content-Type': 'application/json',
-          'api-key': BREVO_API_KEY,
         },
         body: JSON.stringify({
-          sender: { name: 'Sunbal Aziz', email: 'connect@sunbalaziz.com' },
-          to: [{ email: form.email, name: form.name }],
+          from: 'Sunbal Aziz <connect@sunbal.xcler.dev>',
+          to: [form.email],
           subject: `Got your message, ${form.name}! 🚀`,
-          htmlContent: userEmailHTML(form.name),
+          html: userEmailHTML(form.name),
         }),
       })
 
       if (!userRes.ok) {
         const errData = await userRes.json().catch(() => ({}))
-        console.error('Brevo user email error:', userRes.status, errData)
+        console.error('Resend user email error:', userRes.status, errData)
         throw new Error(`User email failed: ${userRes.status}`)
       }
 
