@@ -5,13 +5,16 @@ export default function Footer() {
         Sunbal <span className="text-on-surface">{'{Aziz}'}</span>
       </div>
       <div className="font-label-caps text-label-caps text-outline">
-        © 2024 Sunbal Aziz. Built with Lucid precision.
+        © 2026 Sunbal Aziz. Built while high on caffeine.
       </div>
       <div className="flex gap-6 font-label-caps text-label-caps text-outline">
-        <a href="#" className="hover:text-primary transition-colors">GitHub</a>
-        <a href="#" className="hover:text-primary transition-colors">LinkedIn</a>
-        <a href="#" className="hover:text-primary transition-colors">Twitter</a>
-      </div>
+        <a href="https://github.com/SunbalAzizLCWU" className="hover:text-primary transition-colors">GitHub</a>
+        <a href="https://www.linkedin.com/in/sunbal-aziz-lcwu" className="hover:text-primary transition-colors">LinkedIn</a>
+        <Link to="/contact" className="hover:text-primary transition-colors">
+  Connect
+</Link>
+
+   </div>
     </footer>
   )
 }
