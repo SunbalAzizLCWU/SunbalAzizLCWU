@@ -86,7 +86,7 @@ export default function ContactForm({ variant = 'default' }) {
 
     try {
       // Email to portfolio owner
-      const ownerRes = await fetch('https://api.resend.com/emails', {
+      const ownerRes = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${RESEND_API_KEY}`,
@@ -113,7 +113,7 @@ export default function ContactForm({ variant = 'default' }) {
       }
 
       // Confirmation email to the person who filled the form
-      const userRes = await fetch('https://api.resend.com/emails', {
+      const userRes = await fetch('/api/send-email', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${RESEND_API_KEY}`,
