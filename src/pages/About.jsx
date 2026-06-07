@@ -98,7 +98,7 @@ export default function About() {
             <div className="relative mb-12 md:w-1/2 md:pr-12 md:text-right">
               <div className="absolute left-[-41px] md:left-auto md:right-[-8px] top-1 w-4 h-4 rounded-full bg-surface border-2 border-primary z-10 emerald-glow"></div>
               <div className="glass-panel p-6 rounded-lg ml-4 md:ml-0 hover:shadow-[0_0_20px_rgba(80,200,120,0.1)] transition-shadow">
-                <span className="font-code-display text-code-display text-primary block mb-2">2019 - 2023</span>
+                <span className="font-code-display text-code-display text-primary block mb-2">2022 - 2026</span>
                 <h4 className="font-headline-md text-[20px] font-bold text-on-surface mb-1">BS Computer Science</h4>
                 <p className="font-body-md text-on-surface-variant mb-3">Lahore College for Women University (LCWU)</p>
                 <ul className="font-body-md text-sm text-on-surface-variant space-y-2 text-left md:text-right">
