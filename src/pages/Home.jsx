@@ -44,7 +44,7 @@ export default function Home() {
             <div className="arch-container glass-panel p-2 relative w-full aspect-[3/4]">
               <img
   alt="Sunbal Aziz Portrait"
-  className="w-full h-full object-cover object-center arch-container mix-blend-luminosity opacity-80"
+  className="w-full h-full object-contain object-bottom arch-container mix-blend-luminosity opacity-80"
   src="/hero.webp"
   loading="eager"
   fetchpriority="high"

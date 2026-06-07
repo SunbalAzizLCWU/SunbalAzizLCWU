@@ -29,11 +29,12 @@ export default function About() {
             <div className="relative w-full max-w-[400px] aspect-[3/4] overflow-hidden glass-panel p-2 shadow-[0_0_50px_rgba(80,200,120,0.15)] group" style={{borderRadius:'120px 120px 12px 12px'}}>
               <div className="absolute inset-0 bg-gradient-to-b from-primary/10 to-transparent opacity-50 z-10"></div>
               <img
-                alt="Professional portrait of Sunbal Aziz"
-                className="w-full h-full object-cover grayscale contrast-125 group-hover:grayscale-0 transition-all duration-700"
-                style={{borderRadius:'120px 120px 12px 12px'}}
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUlrrOdIRt_BMmhZlumRzUdkbxnfTMCAQEI4p-p_jEkSNloa0xpz3qVRoWXK0dajdEvC7sYA2D0ACSmzqxr_0g8tDA2JEp0hBcxPpHEmZTlIvR37QmdRg96D3nvpyGOdG6xjZ_6vZ5mZ64cu3UzevnISfM3CO8Yqm7Kt1RNV3H3iu9Ulul4EOYNo3yZ1UGvFmcC0m1I6LNYZ8hHvx5KrayVG1AKA95PUYLxrViYe-F6qC2sXvtjtr7DzP69v48kp7HuSjo2pYguioM"
-              />
+  alt="Sunbal Aziz Portrait"
+  className="w-full h-full object-cover object-center arch-container mix-blend-luminosity opacity-80"
+  src="/about-hero.webp"
+  loading="eager"
+  fetchpriority="high"
+/>
             </div>
           </div>
         </section>
