@@ -43,10 +43,13 @@ export default function Home() {
             <div className="absolute inset-0 bg-primary/10 blur-3xl rounded-full -z-10"></div>
             <div className="arch-container glass-panel p-2 relative w-full aspect-[3/4]">
               <img
-                alt="Sunbal Aziz Portrait"
-                className="w-full h-full object-cover object-center arch-container mix-blend-luminosity opacity-80"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoJkqQXcee34-sp0hreG0WX4YNd3f4d5dZ8bg0PlhOLUgtnTh1CjvdOd_MwikmIkuMW2VrrSl8-5RVr0M3yZO9d1mf0zRgxuNkqAKXn9VzGxQ8Lr9-pydQ2B8wnjhfXqKrMKaENLGJZ_Iv6hMD-BrdC6T15lPQjXHYjQFVaGA3J9TN9qzGLKCJRsrUh2Haososc9dZbKfdw0GnIdRcM7NMp8_JqDpRrLY1cTERhSzPUhZviwnuKpf0qQEs93msft738OqmrT3m5jqq"
-              />
+  alt="Sunbal Aziz Portrait"
+  className="w-full h-full object-cover object-center arch-container mix-blend-luminosity opacity-80"
+  src="/hero.webp"
+  loading="eager"
+  fetchpriority="high"
+/>
+
             </div>
             <div className="absolute -left-6 top-1/4 px-4 py-2 glass-panel rounded font-code-display text-xs text-primary animate-pulse">
               {'{"status": "coding"}'}
