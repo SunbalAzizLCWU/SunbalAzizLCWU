@@ -121,7 +121,7 @@ Software Engineer · Full‑Stack & AI Systems · Systems‑minded Architect
 ---
 
 ## Contact
-- Email: mailto:yo@sunbal.xcler.dev  
+- Email: yo@sunbal.xcler.dev  
 - Portfolio: https://sunbal.xcler.dev  
 - LinkedIn: https://linkedin.com/in/sunbal-aziz-lcwu  
 - Location: Lahore, Pakistan — Open to Full‑Time & Remote roles

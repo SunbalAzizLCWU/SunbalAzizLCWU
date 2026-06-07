@@ -85,7 +85,8 @@ export default function ContactForm({ variant = 'default' }) {
     setStatus('sending')
 
     try {
-      await fetch('https://api.brevo.com/v3/smtp/email', {
+      // Email to portfolio owner
+      const ownerRes = await fetch('https://api.brevo.com/v3/smtp/email', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -93,8 +94,8 @@ export default function ContactForm({ variant = 'default' }) {
           'api-key': BREVO_API_KEY,
         },
         body: JSON.stringify({
-          sender: { name: 'Sunbal Aziz Portfolio', email: 'yo@sunbal.xcler.dev' },
-          to: [{ email: 'connect@sunbal.xcler.dev', name: 'Sunbal Aziz' }],
+          sender: { name: 'Sunbal Aziz Portfolio', email: 'connect@sunbalaziz.com' },
+          to: [{ email: 'connect@sunbalaziz.com', name: 'Sunbal Aziz' }],
           subject: `New message from ${form.name} via Portfolio`,
           htmlContent: `
             <h2>New Contact Form Submission</h2>
@@ -106,7 +107,14 @@ export default function ContactForm({ variant = 'default' }) {
         }),
       })
 
-      await fetch('https://api.brevo.com/v3/smtp/email', {
+      if (!ownerRes.ok) {
+        const errData = await ownerRes.json().catch(() => ({}))
+        console.error('Brevo owner email error:', ownerRes.status, errData)
+        throw new Error(`Owner email failed: ${ownerRes.status}`)
+      }
+
+      // Confirmation email to the person who filled the form
+      const userRes = await fetch('https://api.brevo.com/v3/smtp/email', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -114,16 +122,23 @@ export default function ContactForm({ variant = 'default' }) {
           'api-key': BREVO_API_KEY,
         },
         body: JSON.stringify({
-          sender: { name: 'Sunbal Aziz', email: 'hello@sunbal.xcler.dev' },
+          sender: { name: 'Sunbal Aziz', email: 'connect@sunbalaziz.com' },
           to: [{ email: form.email, name: form.name }],
           subject: `Got your message, ${form.name}! 🚀`,
           htmlContent: userEmailHTML(form.name),
         }),
       })
 
+      if (!userRes.ok) {
+        const errData = await userRes.json().catch(() => ({}))
+        console.error('Brevo user email error:', userRes.status, errData)
+        throw new Error(`User email failed: ${userRes.status}`)
+      }
+
       setStatus('success')
       setForm({ name: '', email: '', message: '' })
     } catch (err) {
+      console.error('Contact form error:', err)
       setStatus('error')
     }
   }
