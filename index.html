@@ -3,120 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sunbal Aziz - Software Engineering graduate specializing in full-stack web development, AI integration, and data analysis. Available for freelance and remote work." />
     <title>Sunbal Aziz - Full Stack & AI Software Engineer</title>
+    <link rel="icon" type="image/x-icon" href="/developer.ico" />
+
+    <!-- Preload LCP image to make it discoverable in initial document -->
+    <link rel="preload" as="image" href="/hero.webp" fetchpriority="high" />
+
+    <!-- Preconnect to font origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="/developer.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "background": "#111415",
-              "outline": "#879487",
-              "surface-variant": "#333537",
-              "error-container": "#93000a",
-              "surface-container-lowest": "#0c0e10",
-              "secondary": "#c8c6c5",
-              "on-error-container": "#ffdad6",
-              "outline-variant": "#3e4a3f",
-              "primary-fixed-dim": "#66dd8b",
-              "tertiary-fixed": "#dde4e6",
-              "secondary-container": "#474746",
-              "surface-container": "#1e2021",
-              "error": "#ffb4ab",
-              "surface-container-highest": "#333537",
-              "on-secondary-container": "#b7b5b4",
-              "on-secondary-fixed": "#1c1b1b",
-              "inverse-on-surface": "#2f3132",
-              "on-primary-fixed": "#00210c",
-              "tertiary-fixed-dim": "#c1c8ca",
-              "surface-tint": "#66dd8b",
-              "tertiary-container": "#acb3b5",
-              "on-background": "#e2e2e4",
-              "primary": "#6ee591",
-              "on-surface": "#e2e2e4",
-              "on-tertiary-container": "#3e4548",
-              "surface-dim": "#111415",
-              "on-tertiary": "#2b3234",
-              "inverse-primary": "#006d36",
-              "primary-fixed": "#83fba5",
-              "on-surface-variant": "#bdcabc",
-              "on-primary-fixed-variant": "#005227",
-              "tertiary": "#c7ced1",
-              "secondary-fixed": "#e5e2e1",
-              "inverse-surface": "#e2e2e4",
-              "on-primary-container": "#005025",
-              "primary-container": "#50c878",
-              "surface-container-high": "#282a2c",
-              "surface": "#111415",
-              "secondary-fixed-dim": "#c8c6c5",
-              "on-secondary-fixed-variant": "#474746",
-              "on-primary": "#003919",
-              "on-error": "#690005",
-              "surface-bright": "#37393b",
-              "on-tertiary-fixed-variant": "#41484a",
-              "surface-container-low": "#1a1c1d",
-              "on-secondary": "#313030",
-              "on-tertiary-fixed": "#161d1f"
-            },
-            borderRadius: {
-              "DEFAULT": "0.125rem",
-              "lg": "0.25rem",
-              "xl": "0.5rem",
-              "full": "0.75rem"
-            },
-            spacing: {
-              "unit": "8px",
-              "container-max": "1280px",
-              "gutter": "24px",
-              "margin-mobile": "20px",
-              "margin-desktop": "64px"
-            },
-            fontFamily: {
-              "code-display": ["JetBrains Mono"],
-              "label-caps": ["JetBrains Mono"],
-              "body-md": ["Inter"],
-              "body-lg": ["Inter"],
-              "headline-md": ["Montserrat"],
-              "headline-lg": ["Montserrat"],
-              "headline-lg-mobile": ["Montserrat"],
-              "headline-xl": ["Montserrat"]
-            },
-            fontSize: {
-              "code-display": ["14px", { lineHeight: "1.5", letterSpacing: "0.05em", fontWeight: "500" }],
-              "label-caps": ["12px", { lineHeight: "1", fontWeight: "700" }],
-              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
-              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
-              "headline-md": ["24px", { lineHeight: "1.4", fontWeight: "600" }],
-              "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "700" }],
-              "headline-lg-mobile": ["32px", { lineHeight: "1.2", fontWeight: "700" }],
-              "headline-xl": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }]
-            }
-          }
-        }
-      }
-    </script>
+
+    <!-- Non-render-blocking font load with font-display=swap -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" /></noscript>
+
+    <!-- Material Symbols - non-render-blocking -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" /></noscript>
+
     <style>
-      body { background-color: #111415; color: #e2e2e4; overflow-x: hidden; }
-      .emerald-glow { box-shadow: 0 0 30px rgba(80,200,120,0.15); }
-      .emerald-glow-strong { box-shadow: 0 0 40px rgba(80,200,120,0.3); }
-      .glass-panel { background: rgba(255,255,255,0.03); backdrop-filter: blur(20px); border: 1px solid rgba(80,200,120,0.2); }
-      .arch-container { border-radius: 120px 120px 0 0; overflow: hidden; }
-      .code-bracket { color: #50c878; text-shadow: 0 0 10px rgba(80,200,120,0.5); }
-      .text-glow { text-shadow: 0 0 10px rgba(110,229,145,0.5); }
-      .emerald-glow-hover:hover { box-shadow: 0 0 40px rgba(80,200,120,0.5); border-color: rgba(110,229,145,0.5); }
-      .input-glow:focus { border-bottom-color: #6ee591; box-shadow: 0 10px 10px -10px rgba(80,200,120,0.5); outline: none; }
-      @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-      .animate-marquee { animation: marquee 40s linear infinite; }
-      .mask-edges { -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); }
-      .spotlight-card::before { content: ''; position: absolute; top: var(--y, 50%); left: var(--x, 50%); width: 300px; height: 300px; background: radial-gradient(circle, rgba(110,229,145,0.15) 0%, transparent 70%); transform: translate(-50%, -50%); pointer-events: none; opacity: 0; transition: opacity 0.3s ease; }
-      .spotlight-card:hover::before { opacity: 1; }
-      .filter-btn.active { background: rgba(80,200,120,0.1); border-color: #6ee591; color: #6ee591; }
+      /* Critical inline CSS to prevent FOUC while fonts load */
+      body { background-color: #111415; color: #e2e2e4; overflow-x: hidden; margin: 0; }
+      #root { min-height: 100vh; }
     </style>
   </head>
   <body>

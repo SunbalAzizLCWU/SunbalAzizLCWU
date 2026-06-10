@@ -31,9 +31,13 @@ export default function About() {
               <img
   alt="Sunbal Aziz Portrait"
   className="w-full h-full object-cover object-center arch-container mix-blend-luminosity opacity-80"
-  src="/about-hero.webp"
-  loading="eager"
-  fetchpriority="high"
+  src="/about-hero-400.webp"
+  srcSet="/about-hero-400.webp 400w, /about-hero.webp 1023w"
+  sizes="400px"
+  width="400"
+  height="600"
+  loading="lazy"
+  decoding="async"
 />
             </div>
           </div>

@@ -45,9 +45,14 @@ export default function Home() {
               <img
   alt="Sunbal Aziz Portrait"
   className="w-full h-full object-cover object-[center_80%] scale-110 arch-container mix-blend-luminosity opacity-90"
-  src="/hero.webp"
+  src="/hero-988.webp"
+  srcSet="/hero-600.webp 600w, /hero-988.webp 988w, /hero.webp 1363w"
+  sizes="(max-width: 768px) 600px, 988px"
+  width="988"
+  height="837"
   loading="eager"
   fetchpriority="high"
+  decoding="sync"
 />
 
             </div>
