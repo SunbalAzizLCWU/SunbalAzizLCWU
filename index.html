@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sunbal Aziz - Software Engineering graduate specializing in full-stack web development, AI integration, and data analysis. Available for freelance and remote work." />
+    <title>Sunbal Aziz - Full Stack & AI Software Engineer</title>
+    <link rel="icon" type="image/x-icon" href="/developer.ico" />
+
+    <!-- Preload LCP image (matches the actual srcset/sizes used in Home.jsx) -->
+    <link
+      rel="preload"
+      as="image"
+      href="/hero-988.webp"
+      imagesrcset="/hero-600.webp 600w, /hero-988.webp 988w, /hero.webp 1363w"
+      imagesizes="(max-width: 768px) 600px, 988px"
+      fetchpriority="high"
+    />
+
+    <style>
+      /* Critical inline CSS to prevent FOUC while styles load */
+      body { background-color: #111415; color: #e2e2e4; overflow-x: hidden; margin: 0; }
+      #root { min-height: 100vh; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
