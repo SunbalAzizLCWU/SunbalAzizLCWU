@@ -8,28 +8,28 @@ const services = [
     title: 'Full Stack Dev',
     desc: 'End-to-end development of robust web applications. Architecting scalable backends and crafting highly responsive, accessible frontend interfaces that deliver seamless user experiences.',
     stack: ['React', 'Node.js', 'Next.js', 'TypeScript'],
-    link: 'View E-Commerce Case Study'
+    link: 'Start a project'
   },
   {
     icon: '\ue322',
     title: 'AI Systems',
     desc: 'Integrating machine learning models into production environments. Designing data pipelines, optimizing inference endpoints, and building intelligent features that scale securely.',
     stack: ['Python', 'TensorFlow', 'PyTorch', 'AWS SageMaker'],
-    link: 'View Predictive Engine Case Study'
+    link: 'Discuss your AI idea'
   },
   {
     icon: '\uf1b7',
     title: 'API Design',
     desc: 'Creating robust, well-documented, and secure RESTful and GraphQL APIs. Focusing on versioning, rate limiting, and performance optimization for mission-critical microservices.',
     stack: ['GraphQL', 'REST', 'Express', 'PostgreSQL'],
-    link: 'View Fintech Gateway Case Study'
+    link: 'Get in touch'
   },
   {
     icon: '\uf190',
     title: 'Data Analysis',
     desc: 'Extracting actionable insights from complex datasets. Designing dashboards, implementing ETL processes, and applying statistical models to drive informed business decisions.',
     stack: ['Pandas', 'SQL', 'Tableau', 'Jupyter'],
-    link: 'View Marketing Analytics Case Study'
+    link: 'Request a consultation'
   }
 ]
 
@@ -77,9 +77,13 @@ export default function Services() {
                     ))}
                   </div>
                 </div>
-                <a className="inline-flex items-center gap-2 font-code-display text-code-display text-primary hover:text-primary-fixed transition-colors mt-auto w-fit" href="#">
-                  <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                
+                  className="inline-flex items-center gap-2 font-code-display text-code-display text-primary hover:text-primary-fixed transition-colors mt-auto w-fit group/link"
+                  href="/contact"
+                >
+                  <span className="text-primary group-hover/link:text-primary-fixed transition-colors">&gt;_</span>
                   {link}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover/link:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </a>
               </div>
             ))}
