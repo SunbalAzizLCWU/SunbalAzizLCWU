@@ -33,6 +33,13 @@ const services = [
   }
 ]
 
+const ArrowRight = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover/link:translate-x-1 transition-transform">
+    <line x1="5" y1="12" x2="19" y2="12"></line>
+    <polyline points="12 5 19 12 12 19"></polyline>
+  </svg>
+)
+
 export default function Services() {
   const handleMouseMove = (e, el) => {
     const rect = el.getBoundingClientRect()
@@ -83,7 +90,7 @@ export default function Services() {
                 >
                   <span className="text-primary group-hover/link:text-primary-fixed transition-colors">&gt;_</span>
                   {link}
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover/link:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                  <ArrowRight />
                 </a>
               </div>
             ))}
