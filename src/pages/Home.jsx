@@ -29,7 +29,7 @@ export default function Home() {
             <div className="flex flex-wrap gap-3 mt-2">
               <span className="px-3 py-1 text-xs font-code-display border border-primary/30 rounded bg-primary/5 text-primary">[Next.js]</span>
               <span className="px-3 py-1 text-xs font-code-display border border-primary/30 rounded bg-primary/5 text-primary">&lt;AI/ML&gt;</span>
-              <span className="px-3 py-1 text-xs font-code-display border border-primary/30 rounded bg-primary/5 text-primary">n8n</span>
+              <span className="px-3 py-1 text-xs font-code-display border border-primary/30 rounded bg-primary/5 text-primary">MERN</span>
             </div>
             <div className="mt-8 flex items-center gap-6">
               <Link to="/contact" className="px-8 py-4 bg-primary text-background font-headline-md text-[16px] flex items-center gap-2 hover:shadow-[0_0_40px_rgba(80,200,120,0.3)] transition-all duration-300 rounded-sm cursor-pointer group">
