@@ -8,6 +8,9 @@
   <img alt="status" src="https://img.shields.io/badge/status-active-00FF9D?style=for-the-badge&logo=github&logoColor=000000">
   <img alt="role" src="https://img.shields.io/badge/role-AI%20%26%20Full‑Stack%20Engineer-00FF9D?style=for-the-badge">
 </p>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=SunbalAzizLCWU&color=00FF9D&style=for-the-badge" />
+</p>
 
 <h1 align="center" style="margin:0 0 8px 0">SUNBAL AZIZ</h1>
 <p align="center" style="margin:0 0 12px 0;color:#9CA3AF">
