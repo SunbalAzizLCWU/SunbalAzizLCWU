@@ -161,20 +161,19 @@ export default function Home() {
             <h2 className="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">
               A look at my <span className="code-bracket">{'{completed projects}'}</span>
             </h2>
-            <div className="flex flex-wrap gap-3">
-              <button className="px-4 py-1 text-xs font-code-display border border-primary text-primary bg-primary/10 rounded cursor-pointer">All</button>
-              <button className="px-4 py-1 text-xs font-code-display border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-colors cursor-pointer">AI/ML</button>
-              <button className="px-4 py-1 text-xs font-code-display border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-colors cursor-pointer">React</button>
-              <button className="px-4 py-1 text-xs font-code-display border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary transition-colors cursor-pointer">Automations</button>
-            </div>
+            <a href="/projects" className="flex items-center gap-2 font-label-caps text-label-caps text-primary border border-primary/30 hover:border-primary px-5 py-2 rounded-full transition-all duration-300 hover:bg-primary/5 shrink-0">
+              View All <span className="material-symbols-outlined text-[16px]">{'\ue5c8'}</span>
+            </a>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
-                title: 'AI-Powered Resume Analyzer',
-                desc: 'An intelligent system that parses CVs and scores them against job descriptions using NLP and machine learning algorithms.',
-                tags: ['Python', 'NLP', 'React'],
+                title: 'Resume Fit Analysis',
+                desc: 'A hardened full-stack microservice that maps candidate qualifications against job requirements using an LLM Gateway for deep alignment scoring and actionable feedback.',
+                tags: ['Next.js', 'FastAPI', 'PostgreSQL', 'Docker'],
+                liveUrl: 'https://aranalyzer.vercel.app/',
+                githubUrl: 'https://github.com/SunbalAzizLCWU/ai-resume-analyzer',
                 preview: (
                   <div className="w-full max-w-sm aspect-video bg-[#0A0A0A] rounded-t-lg border-x-4 border-t-4 border-surface-variant shadow-2xl relative z-10 flex flex-col overflow-hidden">
                     <div className="h-4 bg-surface-variant flex items-center px-2 gap-1">
@@ -182,44 +181,68 @@ export default function Home() {
                       <div className="w-2 h-2 rounded-full bg-tertiary"></div>
                       <div className="w-2 h-2 rounded-full bg-primary"></div>
                     </div>
-                    <div className="flex-grow bg-background p-2 font-code-display text-[8px] text-primary opacity-70">
-                      &gt; Analyzing resume...<br/>&gt; Extracting entities...<br/>&gt; Match score: 87%
+                    <div className="flex-grow bg-background p-3 font-code-display text-[8px] text-primary opacity-70 flex flex-col gap-1">
+                      <span className="text-on-surface-variant">&gt; Analyzing resume...</span>
+                      <span>&gt; Overall Alignment: <span className="text-primary font-bold">85%</span></span>
+                      <span className="text-error">&gt; Missing: game development, product design</span>
+                      <span>&gt; Generating improvements...</span>
                     </div>
                   </div>
                 )
               },
               {
-                title: 'Pakistani Salary Trends Dashboard',
-                desc: 'Interactive data visualization dashboard analyzing tech industry compensation across different roles and experience levels.',
-                tags: ['Data Analysis', 'Next.js', 'Chart.js'],
+                title: 'Salary Insights Dashboard',
+                desc: 'A data engineering pipeline and interactive analytics dashboard built on serverless PostgreSQL, visualizing salary trends across education, experience, and role vectors in real-time.',
+                tags: ['Python', 'Pandas', 'PostgreSQL', 'Streamlit', 'Plotly'],
+                liveUrl: 'https://salary-trends-dashboard.streamlit.app/',
+                githubUrl: 'https://github.com/SunbalAzizLCWU/salary-trends-dashboard',
                 preview: (
                   <div className="w-full max-w-sm aspect-video bg-[#0A0A0A] rounded-t-lg border-x-4 border-t-4 border-surface-variant shadow-2xl relative z-10 flex flex-col overflow-hidden">
                     <div className="h-4 bg-surface-variant flex items-center px-2 gap-1">
                       <div className="w-2 h-2 rounded-full bg-surface-container-low"></div>
+                      <span className="text-[6px] text-on-surface-variant ml-1 font-code-display">Salary Insights</span>
                     </div>
-                    <div className="flex-grow bg-background p-4 flex gap-2 items-end">
-                      <div className="w-4 bg-primary/40 h-1/3"></div>
-                      <div className="w-4 bg-primary/60 h-2/3"></div>
-                      <div className="w-4 bg-primary h-full"></div>
-                      <div className="w-4 bg-primary/80 h-3/4"></div>
+                    <div className="flex-grow bg-background p-3 flex flex-col gap-2">
+                      <div className="flex gap-2 text-[7px] font-code-display text-on-surface-variant">
+                        <span className="bg-surface-container px-2 py-1 rounded">Records: 6,698</span>
+                        <span className="bg-surface-container px-2 py-1 rounded">Avg: PKR 115k</span>
+                      </div>
+                      <div className="flex gap-1 items-end flex-grow px-1">
+                        <div className="flex-1 bg-primary/40 rounded-t" style={{height:'45%'}}></div>
+                        <div className="flex-1 bg-primary/60 rounded-t" style={{height:'65%'}}></div>
+                        <div className="flex-1 bg-primary rounded-t" style={{height:'100%'}}></div>
+                        <div className="flex-1 bg-primary/80 rounded-t" style={{height:'75%'}}></div>
+                        <div className="flex-1 bg-primary/50 rounded-t" style={{height:'55%'}}></div>
+                        <div className="flex-1 bg-primary/30 rounded-t" style={{height:'20%'}}></div>
+                      </div>
                     </div>
                   </div>
                 )
               }
-            ].map(({ title, desc, tags, preview }) => (
-              <div key={title} className="glass-panel rounded-xl overflow-hidden group cursor-pointer">
+            ].map(({ title, desc, tags, liveUrl, githubUrl, preview }) => (
+              <div key={title} className="glass-panel rounded-xl overflow-hidden group cursor-pointer flex flex-col">
                 <div className="h-64 bg-surface-container-highest relative overflow-hidden flex items-center justify-center p-8">
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
                   {preview}
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="font-headline-md text-[20px] text-on-surface group-hover:text-primary transition-colors">{title}</h3>
-                    <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">{'\ue89e'}</span>
+                    <a href={liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`Open ${title} live demo`}>
+                      <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary transition-colors">{'\ue89e'}</span>
+                    </a>
                   </div>
-                  <p className="font-body-md text-sm text-on-surface-variant mb-4">{desc}</p>
-                  <div className="flex gap-2 flex-wrap">
+                  <p className="font-body-md text-sm text-on-surface-variant mb-4 flex-grow">{desc}</p>
+                  <div className="flex gap-2 flex-wrap mb-5">
                     {tags.map(t => <span key={t} className="text-[10px] font-code-display text-primary bg-primary/5 px-2 py-1 rounded">{t}</span>)}
+                  </div>
+                  <div className="flex gap-4 border-t border-outline-variant/20 pt-4 mt-auto">
+                    <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 font-label-caps text-[11px] text-primary hover:text-primary-fixed transition-colors">
+                      <span className="material-symbols-outlined text-[14px]">{'\ue89e'}</span> Live Demo
+                    </a>
+                    <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 font-label-caps text-[11px] text-on-surface-variant hover:text-on-surface transition-colors">
+                      <span className="material-symbols-outlined text-[14px]">{'\ue86f'}</span> GitHub
+                    </a>
                   </div>
                 </div>
               </div>
