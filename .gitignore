@@ -1,0 +1,74 @@
+# ----------------------------
+# Node.js
+# ----------------------------
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ----------------------------
+# Environment variables
+# ----------------------------
+.env
+.env.*
+!.env.example
+
+# ----------------------------
+# Build outputs
+# ----------------------------
+dist/
+build/
+.out/
+.next/
+.nuxt/
+.svelte-kit/
+
+# ----------------------------
+# Logs
+# ----------------------------
+logs/
+*.log
+
+# ----------------------------
+# OS files
+# ----------------------------
+.DS_Store
+Thumbs.db
+
+# ----------------------------
+# IDE / Editor
+# ----------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ----------------------------
+# Cache
+# ----------------------------
+.cache/
+.parcel-cache/
+coverage/
+
+# ----------------------------
+# Python (if using backend)
+# ----------------------------
+__pycache__/
+*.pyc
+*.pyo
+
+# ----------------------------
+# Misc
+# ----------------------------
+*.zip
+*.tar
+*.gz
+
+# ----------------------------
+# Optional: keep lock files (recommended)
+# ----------------------------
+# DO NOT ignore these:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
